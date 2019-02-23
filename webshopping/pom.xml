@@ -16,6 +16,13 @@
 
 
 	<dependencies>
+	
+	    <!-- Link backend project -->
+	    <dependency>
+	        <groupId>net.kri</groupId>
+	        <artifactId>webprojectbackend</artifactId>
+	        <version>0.0.1-SNAPSHOT</version>
+	    </dependency>
 
 		<!-- JAVA EE API -->
 		<dependency>
