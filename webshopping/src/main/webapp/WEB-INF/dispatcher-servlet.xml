@@ -12,8 +12,8 @@
    
    ">
     
-    <context:component-scan base-package="net.kri.webshopping.controller" />
-	<context:component-scan base-package="net.kri.webprojectbackend.daoimpl" />
+    <context:component-scan base-package="net.kri.webshopping"/>
+	<context:component-scan base-package="net.kri.webprojectbackend"/>
 
     
     <bean id="viewResolver"

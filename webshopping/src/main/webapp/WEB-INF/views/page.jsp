@@ -23,15 +23,20 @@
     
     <script>
        window.menu = '${title}' ;
+       
+       window.contextRoot = '${contextRoot}' ;
+       
     </script>
        
     <!-- Bootstrap core CSS -->
-    <link href="${css}/bootstrap.css" rel="stylesheet">
+    <link href="${css}/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Bootstrap core CSS -->
-    <link href="${css}/bootstap-readable-theme.css" rel="stylesheet">
+    <!-- Bootstrap Readable Theme-->
+    <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
     
-
+    <!-- Bootstrap dataTables-->
+    <link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
+    
     <!-- Add custom CSS here -->
     <link href="${css}/myapp.css" rel="stylesheet">
 
@@ -61,10 +66,17 @@
              <%@include file="contact.jsp" %>
          </c:if>
          
-         <!-- Load only when user clicks contact -->
-         <c:if test="${userClickAllProducts == true or userClickCategoryProducts ==  true }"> 
-             <%@include file="listProducts.jsp" %>
-         </c:if>
+        <!-- Load only when user clicks contact -->
+			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true }">
+				<%@include file="listProducts.jsp"%>
+			</c:if>	
+			
+			
+			<!-- Load only when user clicks show product -->
+			<c:if test="${userClickShowProduct == true}">
+				<%@include file="singleProduct.jsp"%>
+			</c:if>								
+        
     
     </div>
  
@@ -75,12 +87,18 @@
     
     
     <!-- jQuery -->
-    <script src="${js}/jquery-1.10.2.js"></script>
+    <script src="${js}/jquery.js"></script>
     
      <!-- Bootstrap Core JavaScript -->
-    <script src="${js}/bootstrap.js"></script>
+    <script src="${js}/bootstrap.min.js"></script>
     
-     <!-- Self coded JavaScript -->
+     <!-- DataTable Plugin -->
+    <script src="${js}/jquery.dataTables.js"></script>
+    
+     <!-- DataTable Bootstrap Script -->
+    <script src="${js}/dataTables.bootstrap.js"></script>
+    
+<!-- Self coded JavaScript -->
     <script src="${js}/myapp.js"></script>
     
     </div>
