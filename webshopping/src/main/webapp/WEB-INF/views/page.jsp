@@ -24,7 +24,7 @@
     <script>
        window.menu = '${title}' ;
        
-       window.contextRoot = '${contextRoot}' ;
+       window.contextRoot = '${contextRoot}' 
        
     </script>
        
@@ -72,9 +72,15 @@
 			</c:if>	
 			
 			
-			<!-- Load only when user clicks show product -->
+	    <!-- Load only when user clicks show product -->
 			<c:if test="${userClickShowProduct == true}">
 				<%@include file="singleProduct.jsp"%>
+			</c:if>	
+			
+										
+        <!-- Load only when user clicks manage products -->
+			<c:if test="${userClickManageProducts == true}">
+				<%@include file="manageProducts.jsp"%>
 			</c:if>								
         
     

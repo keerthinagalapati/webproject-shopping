@@ -105,6 +105,7 @@
 			<artifactId>jcl-over-slf4j</artifactId>
 			<version>1.7.24</version>
 		</dependency>
+	
 		
 		
 		</dependencies>
