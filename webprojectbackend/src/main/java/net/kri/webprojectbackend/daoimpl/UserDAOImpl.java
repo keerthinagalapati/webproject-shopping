@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import net.kri.webprojectbackend.dao.UserDAO;
 import net.kri.webprojectbackend.dto.Address;
-import net.kri.webprojectbackend.dto.Cart;
+
 import net.kri.webprojectbackend.dto.User;
 
 @Repository("userDAO")
@@ -44,18 +44,6 @@ public class UserDAOImpl implements UserDAO{
 		}
 	}
 	
-	@Override
-	public boolean updateCart(Cart cart) {
-		try {			
-			// will look for this code later and why we need to change it
-			sessionFactory.getCurrentSession().update(cart);			
-			return true;
-		}
-		catch(Exception ex) {
-			ex.printStackTrace();
-			return false;
-		}
-	}
 
 	@Override
 	public User getByEmail(String email) {
@@ -69,7 +57,7 @@ public class UserDAOImpl implements UserDAO{
         			           .getSingleResult();
         }
         catch(Exception ex) {
-           ex.printStackTrace();
+           //ex.printStackTrace();
            return null;
 	    }
 	}
@@ -113,5 +101,6 @@ public class UserDAOImpl implements UserDAO{
 	
 	
 	}
+
 
 }
